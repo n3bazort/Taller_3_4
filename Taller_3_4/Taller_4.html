@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller_4</title>
+</head>
+
+<body>
+    <h1>Crear una página Web que permita ejecutar y mostrar:</h1>
+
+    <!--  <script>
+        /*     < script >
+             // Convertir horas a segundos en JavaScript
+             let hora = parseFloat ( prompt ( ' hora : ' ) ) ;
+             convertir = hora * 3600 ;
+             document.write ( convertir + " s " ) ; 1 I */
+
+    </script> -->
+    <script type="text/javascript">
+        alert("Bienvenido");
+
+        do {
+
+            /*  var num1 = eval(prompt(" Introduce el primer valor numérico: "));
+             var num2 = eval(prompt(" Introduce el segundo valor numérico: ")); */
+
+            var opcion = eval(prompt("--------------Menú-------------- \nElige una operación a realizar\n\n 1.Transforme la hora actual en segundos \n 2.Calcular el área de un triángulo. \n 3.Calcule la raíz cuadrada de un número impar \n 4.Mostrar la longitud de la cadena.\n 5.Mostrar la versión del navegador.\n 6.Mostrar el ancho y la altura de la pantalla\n 7.Imprimir la página.\n 0. Salir/Terminar    "));
+
+            var resultado = 0;
+            if (opcion == 1) {
+                momentoActual = new Date();
+                hora = momentoActual.getHours();
+                minuto = momentoActual.getMinutes();
+                segundo = momentoActual.getSeconds();
+                horaImprimible = hora + ":" + minuto + ":" + segundo;
+                hor = (hora * 3600);
+                min = minuto * 60;
+                seg = segundo;
+                suma = hor + min + seg;
+                alert("Hora actual: " + horaImprimible + "\n\n Transformación a segundos:\n\nLas horas: " + hor + " s\nLos minutos: " + min + " s\nLos segundos: " + seg + " s\n\nTotal: " + suma + " seg");
+
+
+
+            }
+            if (opcion == 2) {
+
+                var base = prompt("Ingresa el valor de la Base del trinagulo");
+                var altura = prompt("Ingresa el valor de la Altura del triangulo");
+                resultado = (base * altura) / 2;
+                alert("El area del TRIANGULO es: " + resultado);
+            }
+            if (opcion == 3) {
+                var n = prompt("Escribe un número impar a calcular:");
+                var par = n % 2;
+                
+                while (par == 0) {
+                    var n = prompt("Error.Escribe un número impar a calcular:");
+                    var par = n % 2;
+                }
+
+               /*  alert(par); */
+                var raiz = Math.sqrt(n);
+                var redon = raiz.toFixed(3);
+                alert("La raiz cuadrada es: " + redon);
+            }
+
+            if (opcion == 4) {
+                var texto = new String(prompt("Escribe una oración:"));
+                alert("Numero de carácteres de la oración: " + texto.length);
+            }
+            if (opcion == 5) {
+                alert("Nombre del navegador: " + navigator.appName);
+                alert("Versión del navegador: " + navigator.appVersion);
+            }
+            if (opcion == 6) {
+                alert("La resolución de tu pantalla es: " + screen.width + "px x " + screen.height + "px")
+            }
+            if (opcion == 7) {
+                window.print();
+                opcion = 0;
+            }
+
+            /*   alert(" Resultado : " + resultado); */
+
+        } while (opcion != 0);
+
+
+
+
+    </script>
+
+
+    <h2>• 1 Transformar la hora actual a segundos.</h2>
+    <h2>• 2 Calcular el área de un triángulo, que es igual a: (base * altura)/2.</h2>
+    <h2>• 3 Calcule la raíz cuadrada de un número impar y muestre el resultado con 3 dígitos</h2>
+    <h2>• 4 Ingresar una cadena de texto y mostrar la longitud de la cadena.</h2>
+    <h2>• 5 Mostrar la versión del navegador.</h2>
+    <h2>• 6 Mostrar el ancho y la altura de la pantalla.</h2>
+    <h2>• 7 Imprimir la página.</h2>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller_3</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        alert("Bienvenido");
+
+        do {
+
+            var num1 = eval(prompt(" Introduce el primer valor numérico: "));
+            var num2 = eval(prompt(" Introduce el segundo valor numérico: "));
+
+            var opcion = eval(prompt("-------Menú------- \nElige una operación a realizar\n\n 1.Sumar\n 2.Restar\n 3.Multiplicar\n 4.Dividir\n 5.Mod \n\n 0.Terminar    "));
+            var resultado=0;
+            if (opcion == 1) {
+                resultado =num1+num2;
+            }
+            if (opcion == 2) {
+                resultado = num1 - num2;
+            }
+            if  (opcion == 3) {
+                resultado = num1 * num2;
+            }
+            if (opcion == 4) {
+                resultado = num1 / num2;
+            }
+            if (opcion == 5) {
+                resultado = num1 % num2;
+            }
+            alert(" Resultado : "+resultado);
+        } while (opcion != 0);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
